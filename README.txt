@@ -1,16 +1,12 @@
-MEIYO LEGAL WEBSITES
+MEIYO WEBSITE
+Upload the CONTENTS of this folder to the root of the jayceris/Meiyo GitHub repository.
 
-Files:
-- terms.html   -> Terms of Service page
-- privacy.html -> Privacy Policy page
+- index.html: homepage
+- terms.html: dedicated Terms of Service page
+- privacy.html: dedicated Privacy Policy page
+- assets/meiyo-avatar.jpg: approved M-cutout artwork
 
-These are complete, standalone HTML pages. Upload both files to the same public web-hosting location.
-Once hosted, use the public HTTPS URLs in Discord Developer Portal:
-- Terms of Service URL: https://YOUR-SITE/terms.html
-- Privacy Policy URL: https://YOUR-SITE/privacy.html
+The homepage has separate Terms and Privacy sections linking to their own pages.
+Discord community: https://discord.gg/EdFzvnwJP
 
-Important:
-- Replace the contact method if you want to provide a dedicated support email or form.
-- Review the content before publishing.
-- The pages describe the current Meiyo bot setup: local JSON storage, invite tracking, join/leave history, and server configuration.
-- Hosting is not included in this ZIP. No public URLs exist until you publish these files.
+Important: HTML is the normal file format for a website. Upload index.html as a file to the repository root. GitHub Pages serves it as the homepage at https://meiyo.site. Visitors see the designed website, not the source code. Do not paste the HTML source into a README or create a page called index.html.html.
