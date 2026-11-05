@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101012">
+<title>Privacy Policy | Meiyo</title><link rel="icon" href="assets/meiyo-avatar.jpg">
+<style>
+@font-face{font-family:'SF Pro Display';src:url('assets/SFPRODISPLAYBOLD.ttf') format('truetype');font-style:normal;font-weight:700;font-display:swap}
+
+@font-face{font-family:"Variane Craina";src:url("assets/variane-craina.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+
+:root{--bg:#101012;--surface:#171619;--ink:#f0edf2;--muted:#a6a1ab;--line:#303038;--accent:#d9c5c5}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 "DM Sans",system-ui,sans-seriffont-family:'SF Pro Display',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:700}a{color:#eadcda;text-decoration:none}a:hover{text-decoration:underline}
+header{border-bottom:1px solid var(--line)}.nav{width:min(960px,calc(100% - 36px));height:72px;margin:auto;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px;color:var(--ink);font:400 1.65rem "Variane Craina",serif;letter-spacing:0}.brand img{width:34px;height:34px;border-radius:50%;object-fit:cover}.nav a:last-child{color:var(--muted);font-size:.9rem}
+main{width:min(820px,calc(100% - 36px));margin:0 auto;padding:72px 0 90px}.eyebrow{font-size:.72rem;letter-spacing:.18em;color:var(--accent);text-transform:uppercase}h1{font-family:"Variane Craina",serif;font-size:clamp(3.2rem,7.5vw,5.1rem);line-height:1.08;letter-spacing:0;margin:17px 0;font-weight:400}.lead{color:#c4bec1;font-size:1.08rem;max-width:660px}.meta{font-size:.8rem;color:#898184;margin:22px 0 38px}article{border-top:1px solid var(--line);padding-top:24px}h2{font-size:1.2rem;letter-spacing:-.025em;margin:32px 0 7px}h2:first-child{margin-top:0}p,li{color:#d0c9ca}ul{padding-left:22px}li{margin:7px 0}.note{border-left:2px solid var(--accent);padding:12px 17px;background:#191719;color:#d4cbd5;margin:24px 0}footer{border-top:1px solid var(--line);padding:24px 18px;text-align:center;color:#898184;font-size:.8rem}
+
+/* Subtle motion */
+@keyframes meiyoFadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes meiyoSoftIn{from{opacity:0}to{opacity:1}}
+@keyframes meiyoFloat{0%,100%{transform:translateY(0) rotate(1deg)}50%{transform:translateY(-7px) rotate(1deg)}}
+html{scroll-behavior:smooth}
+body{animation:meiyoSoftIn .7s ease both}
+.hero>div:first-child{animation:meiyoFadeUp .8s cubic-bezier(.2,.7,.2,1) both}
+.portrait{animation:meiyoFadeUp .9s .12s cubic-bezier(.2,.7,.2,1) both}
+.feature,.doc{transition:transform .28s ease,border-color .28s ease,background-color .28s ease}
+.feature:hover,.doc:hover{transform:translateY(-4px);border-color:#bba6a655}
+a{transition:color .22s ease,background-color .22s ease,border-color .22s ease}
+.primary,.discord{transition:transform .22s ease,filter .22s ease,background-color .22s ease}
+.primary:hover,.discord:hover{transform:translateY(-2px);filter:brightness(1.06)}
+@media(prefers-reduced-motion:no-preference){
+  .portrait img{animation:meiyoFloat 7s ease-in-out 1s infinite}
+  .feature{animation:meiyoFadeUp .65s ease both}
+  .feature:nth-child(2){animation-delay:.06s}.feature:nth-child(3){animation-delay:.12s}
+  .feature:nth-child(4){animation-delay:.18s}.feature:nth-child(5){animation-delay:.24s}
+  .feature:nth-child(6){animation-delay:.30s}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+
+</style></head><body>
+<header><div class="nav"><a class="brand" href="index.html"><img src="assets/meiyo-avatar.jpg" alt="">MEIYO</a><a href="index.html">← Back to home</a></div></header>
+<main><div class="eyebrow">DATA / PRIVACY</div><h1>Privacy Policy</h1><p class="lead">What Meiyo stores, why it is needed, and how data is handled.</p><div class="meta">Effective date: November 5, 2026 · Last updated: November 5, 2026</div>
+<article>
+<h2>1. About this policy</h2>
+<p>This policy explains how the Meiyo Discord bot handles information when it operates in a Discord server. Meiyo is an independent community bot and is not operated by Discord.</p>
+<h2>2. Information the bot stores</h2>
+<p>To provide its features, Meiyo may store:</p>
+<ul><li>Discord user IDs and the ID of the inviter, when that information can be determined.</li>
+<li>Invite codes and invite-use counts observed by the bot.</li>
+<li>Member join and leave timestamps.</li>
+<li>Account creation age or account-age information at the time of joining, used for configurable new-account notices.</li>
+<li>Invite totals and related leaderboard statistics.</li>
+<li>Server configuration, such as welcome, leave, and invite-log channel IDs, configured role IDs, and custom welcome or leave text.</li></ul>
+<h2>3. Information the bot does not intentionally collect</h2>
+<p>Meiyo's invite and welcome features do not require reading or storing members' private messages or general message content. Do not send passwords, payment details, or other sensitive information to the bot.</p>
+<h2>4. How information is used</h2>
+<p>Stored information is used only to operate the bot's community features, including invite attribution, invite statistics and leaderboards, welcome and leave messages, account-age notices, and configured automatic role assignment.</p>
+<h2>5. Storage and sharing</h2>
+<p>The current Meiyo setup stores its bot data in a local JSON database on the device running the bot (the <code>data/guild-data.json</code> file by default). The bot operator is responsible for the security, backups, and access to that device. The operator does not intentionally sell the bot's stored tracking data or share it with advertisers or unrelated third parties.</p>
+<p>Meiyo communicates with Discord to provide its features. Discord processes information under its own <a href="https://discord.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+<h2>6. Retention and deletion</h2>
+<p>When a member leaves, the bot removes that member's current member-specific record. Historical join records and aggregate invite statistics may remain in the local database for bot functionality and historical reporting. Server administrators can remove stored bot data by deleting the bot's local database, but doing so resets the stored tracking and configuration data.</p>
+<p>To ask about a record or request deletion, contact the Meiyo server administration team. The operator may need enough information to identify the relevant Discord account and server. Some aggregate or historical records may not identify a current member directly.</p>
+<h2>7. Security</h2>
+<p>The bot operator takes reasonable steps to limit access to the local database and bot credentials. No storage or internet transmission method is completely secure. Keep the bot token private and restrict access to the device and files that host the bot.</p>
+<h2>8. Children and age requirements</h2>
+<p>Meiyo does not knowingly seek to collect personal information beyond what is needed for its Discord features. Users must meet Discord's minimum age requirement and any higher age requirement that applies in their location.</p>
+<h2>9. Changes and contact</h2>
+<p>This policy may be updated when the bot's features or data handling changes. The latest version will be published at this page. For privacy questions or deletion requests, contact the Meiyo server administration team through the official Discord server.</p>
+<div class="note">This policy describes the current bot design as configured for local JSON storage. If you change the bot to use a database, hosting provider, analytics, or other integrations, update this policy before using those features.</div>
+</article></main>
+<footer>Meiyo is Jay’s personal Discord bot and is not affiliated with or endorsed by Discord Inc. · <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> · Created and managed by Jay.</footer>
+</body></html>
