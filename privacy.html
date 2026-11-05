@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A clear explanation of what Meiyo stores, how it is used, and how to request deletion."><meta name="theme-color" content="#0b1020">
+<title>Privacy Policy | Meiyo</title><style>
+:root{color-scheme:dark;--bg:#0b1020;--panel:#121a2e;--text:#edf2ff;--muted:#aab6d3;--accent:#9b8cff;--line:#283552}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#25204d 0,transparent 38%),var(--bg);color:var(--text);font:16px/1.75 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{width:min(900px,calc(100% - 32px));margin:0 auto;padding:56px 0 72px}
+.top{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+.logo{display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,#9b8cff,#54c7d8);color:#0b1020;font-weight:900;font-size:20px}
+h1{font-size:clamp(36px,7vw,58px);line-height:1.08;letter-spacing:-.04em;margin:34px 0 12px}
+.lead{font-size:18px;color:var(--muted);max-width:700px}
+.meta{color:var(--muted);font-size:14px;margin:20px 0 34px}
+nav{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 38px}
+nav a,.pill{border:1px solid var(--line);border-radius:999px;padding:8px 14px;color:var(--text);text-decoration:none;font-size:14px}
+nav a:hover{border-color:var(--accent);color:#c9c1ff}
+article{background:rgba(18,26,46,.86);border:1px solid var(--line);border-radius:22px;padding:clamp(22px,5vw,42px)}
+h2{font-size:21px;margin:32px 0 8px;letter-spacing:-.02em}h2:first-child{margin-top:0}
+p,li{color:#d6def2}ul{padding-left:22px}li{margin:7px 0}
+a{color:#b9adff}.note{border-left:3px solid var(--accent);padding:12px 16px;background:#191d38;border-radius:0 12px 12px 0;color:#d8d5ff;margin:22px 0}
+footer{color:var(--muted);font-size:13px;margin-top:24px;text-align:center}
+</style></head>
+<body><main class="wrap"><div class="top"><div class="logo">M</div><span>Meiyo Community</span></div>
+<h1>Privacy Policy</h1><p class="lead">A clear explanation of what Meiyo stores, how it is used, and how to request deletion.</p><div class="meta">Effective date: November 5, 2026 · Last updated: November 5, 2026</div>
+<nav><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a><a href="https://discord.com/terms" target="_blank" rel="noopener">Discord Terms</a><a href="https://discord.com/guidelines" target="_blank" rel="noopener">Community Guidelines</a></nav>
+<article>
+<h2>1. About this policy</h2>
+<p>This policy explains how the Meiyo Discord bot handles information when it operates in a Discord server. Meiyo is an independent community bot and is not operated by Discord.</p>
+<h2>2. Information the bot stores</h2>
+<p>To provide its features, Meiyo may store:</p>
+<ul><li>Discord user IDs and the ID of the inviter, when that information can be determined.</li>
+<li>Invite codes and invite-use counts observed by the bot.</li>
+<li>Member join and leave timestamps.</li>
+<li>Account creation age or account-age information at the time of joining, used for configurable new-account notices.</li>
+<li>Invite totals and related leaderboard statistics.</li>
+<li>Server configuration, such as welcome, leave, and invite-log channel IDs, configured role IDs, and custom welcome or leave text.</li></ul>
+<h2>3. Information the bot does not intentionally collect</h2>
+<p>Meiyo's invite and welcome features do not require reading or storing members' private messages or general message content. Do not send passwords, payment details, or other sensitive information to the bot.</p>
+<h2>4. How information is used</h2>
+<p>Stored information is used only to operate the bot's community features, including invite attribution, invite statistics and leaderboards, welcome and leave messages, account-age notices, and configured automatic role assignment.</p>
+<h2>5. Storage and sharing</h2>
+<p>The current Meiyo setup stores its bot data in a local JSON database on the device running the bot (the <code>data/guild-data.json</code> file by default). The bot operator is responsible for the security, backups, and access to that device. The operator does not intentionally sell the bot's stored tracking data or share it with advertisers or unrelated third parties.</p>
+<p>Meiyo communicates with Discord to provide its features. Discord processes information under its own <a href="https://discord.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+<h2>6. Retention and deletion</h2>
+<p>When a member leaves, the bot removes that member's current member-specific record. Historical join records and aggregate invite statistics may remain in the local database for bot functionality and historical reporting. Server administrators can remove stored bot data by deleting the bot's local database, but doing so resets the stored tracking and configuration data.</p>
+<p>To ask about a record or request deletion, contact the Meiyo server administration team. The operator may need enough information to identify the relevant Discord account and server. Some aggregate or historical records may not identify a current member directly.</p>
+<h2>7. Security</h2>
+<p>The bot operator takes reasonable steps to limit access to the local database and bot credentials. No storage or internet transmission method is completely secure. Keep the bot token private and restrict access to the device and files that host the bot.</p>
+<h2>8. Children and age requirements</h2>
+<p>Meiyo does not knowingly seek to collect personal information beyond what is needed for its Discord features. Users must meet Discord's minimum age requirement and any higher age requirement that applies in their location.</p>
+<h2>9. Changes and contact</h2>
+<p>This policy may be updated when the bot's features or data handling changes. The latest version will be published at this page. For privacy questions or deletion requests, contact the Meiyo server administration team through the official Discord server.</p>
+<div class="note">This policy describes the current bot design as configured for local JSON storage. If you change the bot to use a database, hosting provider, analytics, or other integrations, update this policy before using those features.</div>
+</article><footer>Meiyo is an independent community project and is not affiliated with or endorsed by Discord Inc.</footer></main></body></html>
