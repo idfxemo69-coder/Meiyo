@@ -1,2 +1,2 @@
 # Meiyo
-the discord bot of meiyo 
+Official Server
