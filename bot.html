@@ -51,6 +51,31 @@ section{padding:95px 0}.section-head{display:flex;justify-content:space-between;
   .visual > .floating{top:-30px!important;padding:10px 14px}
 }
 
+
+/* Shared floating label: close to the logo, with a soft right-to-left entrance */
+.visual > .floating{
+  left:auto!important;
+  right:0!important;
+  top:auto!important;
+  bottom:38px!important;
+  z-index:5;
+  white-space:nowrap;
+  animation:floating-card-enter .85s cubic-bezier(.2,.75,.25,1) both!important;
+}
+@keyframes floating-card-enter{
+  from{opacity:0;transform:translateX(28px);filter:blur(9px)}
+  to{opacity:1;transform:translateX(0);filter:blur(0)}
+}
+@media(max-width:800px){
+  .visual > .floating{right:0!important;bottom:22px!important}
+}
+@media(max-width:520px){
+  .visual > .floating{right:-5px!important;bottom:18px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .visual > .floating{animation:none!important;filter:none!important;transform:none!important;opacity:1!important}
+}
+
 </style>
 </head>
 <body><div class="topline"></div>
