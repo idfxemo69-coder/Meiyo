@@ -19,6 +19,31 @@ main{width:min(790px,calc(100% - 36px));margin:0 auto;padding:82px 0 100px}.eyeb
 /* Restrained accent lighting, kept within the document layout */
 main{background-image:radial-gradient(ellipse 27rem 20rem at 88% 2%,rgba(190,145,163,.075),transparent 75%),radial-gradient(ellipse 22rem 16rem at 5% 62%,rgba(166,126,151,.045),transparent 76%)}
 
+
+/* Scroll reveal matches the site's entrance: soft focus to crisp, with a gentle rise */
+.scroll-reveal{
+  opacity:0;
+  filter:blur(12px);
+  transform:translate3d(0,16px,0) scale(.985);
+  transition:
+    opacity .8s ease,
+    filter .9s cubic-bezier(.2,.7,.2,1),
+    transform .9s cubic-bezier(.2,.7,.2,1);
+  transition-delay:var(--reveal-delay,0ms);
+  will-change:opacity,filter,transform;
+}
+.scroll-reveal.is-visible{
+  opacity:1;
+  filter:blur(0);
+  transform:translate3d(0,0,0) scale(1);
+}
+@media(max-width:800px){
+  .scroll-reveal{filter:blur(9px);transform:translate3d(0,12px,0) scale(.99);transition-duration:.72s}
+}
+@media(prefers-reduced-motion:reduce){
+  .scroll-reveal,.scroll-reveal.is-visible{opacity:1;filter:none;transform:none;transition:none;will-change:auto}
+}
+
 </style></head><body>
 <header><div class="nav"><a class="brand" href="index.html"><img src="assets/meiyo-avatar.jpg" alt="">MEIYO</a><a href="index.html">← Back to home</a></div></header>
 <main><div class="eyebrow">COMMUNITY / TERMS</div><h1>Terms of Service</h1><p class="lead">The rules and expectations for using Meiyo and participating in its community.</p><div class="meta">Effective date: November 5, 2026 · Last updated: November 5, 2026</div>
