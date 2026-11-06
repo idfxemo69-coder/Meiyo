@@ -86,6 +86,31 @@ section:nth-of-type(1){background-image:radial-gradient(ellipse 30rem 18rem at 1
 .join{background-image:radial-gradient(ellipse 26rem 14rem at 50% 50%,rgba(190,145,163,.075),transparent 75%)}
 @media(max-width:800px){.hero{background-image:radial-gradient(ellipse 24rem 22rem at 78% 48%,rgba(190,145,163,.075),transparent 74%)}}
 
+
+/* Scroll reveal matches the site's entrance: soft focus to crisp, with a gentle rise */
+.scroll-reveal{
+  opacity:0;
+  filter:blur(12px);
+  transform:translate3d(0,16px,0) scale(.985);
+  transition:
+    opacity .8s ease,
+    filter .9s cubic-bezier(.2,.7,.2,1),
+    transform .9s cubic-bezier(.2,.7,.2,1);
+  transition-delay:var(--reveal-delay,0ms);
+  will-change:opacity,filter,transform;
+}
+.scroll-reveal.is-visible{
+  opacity:1;
+  filter:blur(0);
+  transform:translate3d(0,0,0) scale(1);
+}
+@media(max-width:800px){
+  .scroll-reveal{filter:blur(9px);transform:translate3d(0,12px,0) scale(.99);transition-duration:.72s}
+}
+@media(prefers-reduced-motion:reduce){
+  .scroll-reveal,.scroll-reveal.is-visible{opacity:1;filter:none;transform:none;transition:none;will-change:auto}
+}
+
 </style>
 </head>
 <body><div class="topline"></div>
