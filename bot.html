@@ -77,40 +77,54 @@ section{padding:95px 0}.section-head{display:flex;justify-content:space-between;
 }
 
 
-/* Ambient Meiyo accent glow: decorative only, never blocks content or controls */
+/* Ambient Meiyo blobs: small, varied and gently drifting */
 body{position:relative;isolation:isolate}
 body::before,body::after{
   content:"";
   position:fixed;
-  inset:-8%;
+  inset:-12%;
   z-index:0;
   pointer-events:none;
   background-repeat:no-repeat;
 }
 body::before{
-  opacity:.9;
-  filter:blur(26px);
+  opacity:.78;
+  filter:blur(25px);
   background-image:
-    radial-gradient(ellipse 25rem 21rem at 12% 22%,rgba(190,145,163,.30),transparent 72%),
-    radial-gradient(ellipse 23rem 28rem at 88% 55%,rgba(166,126,151,.27),transparent 73%),
-    radial-gradient(ellipse 28rem 18rem at 48% 96%,rgba(215,183,193,.19),transparent 74%);
+    radial-gradient(ellipse 12rem 9rem at 13% 24%,rgba(190,145,163,.25),transparent 72%),
+    radial-gradient(ellipse 16rem 11rem at 86% 54%,rgba(166,126,151,.23),transparent 73%),
+    radial-gradient(ellipse 10rem 8rem at 48% 91%,rgba(215,183,193,.19),transparent 74%);
+  animation:meiyo-blob-drift-a 27s ease-in-out infinite alternate;
 }
 body::after{
-  opacity:.78;
-  filter:blur(34px);
+  opacity:.7;
+  filter:blur(31px);
   background-image:
-    radial-gradient(ellipse 18rem 24rem at 72% 8%,rgba(207,168,183,.22),transparent 72%),
-    radial-gradient(ellipse 22rem 18rem at 8% 82%,rgba(154,119,145,.20),transparent 74%);
+    radial-gradient(ellipse 9rem 12rem at 72% 9%,rgba(207,168,183,.21),transparent 72%),
+    radial-gradient(ellipse 13rem 9rem at 7% 78%,rgba(154,119,145,.19),transparent 74%);
+  animation:meiyo-blob-drift-b 34s ease-in-out infinite alternate;
 }
 body>*{position:relative;z-index:1}
-@media(max-width:800px){
-  body::before{opacity:.82;filter:blur(23px);background-image:
-    radial-gradient(ellipse 17rem 18rem at 0% 20%,rgba(190,145,163,.28),transparent 73%),
-    radial-gradient(ellipse 18rem 22rem at 100% 58%,rgba(166,126,151,.25),transparent 74%),
-    radial-gradient(ellipse 19rem 15rem at 48% 96%,rgba(215,183,193,.17),transparent 75%)}
-  body::after{opacity:.68;filter:blur(30px)}
+@keyframes meiyo-blob-drift-a{
+  0%{transform:translate3d(-1.5%,0,0) scale(.98)}
+  50%{transform:translate3d(1.8%,2.2%,0) scale(1.025)}
+  100%{transform:translate3d(-.5%,-1.5%,0) scale(1)}
 }
-@media(prefers-reduced-motion:reduce){body::before,body::after{will-change:auto}}
+@keyframes meiyo-blob-drift-b{
+  0%{transform:translate3d(1.5%,1%,0) scale(1.02)}
+  50%{transform:translate3d(-2%,-1.8%,0) scale(.98)}
+  100%{transform:translate3d(1%,2%,0) scale(1.025)}
+}
+@media(max-width:800px){
+  body::before{opacity:.7;filter:blur(22px);background-image:
+    radial-gradient(ellipse 9rem 8rem at 4% 20%,rgba(190,145,163,.23),transparent 73%),
+    radial-gradient(ellipse 12rem 10rem at 96% 58%,rgba(166,126,151,.22),transparent 74%),
+    radial-gradient(ellipse 9rem 7rem at 48% 94%,rgba(215,183,193,.17),transparent 75%)}
+  body::after{opacity:.62;filter:blur(26px);background-image:
+    radial-gradient(ellipse 8rem 10rem at 78% 8%,rgba(207,168,183,.19),transparent 72%),
+    radial-gradient(ellipse 10rem 8rem at 5% 78%,rgba(154,119,145,.17),transparent 74%)}
+}
+@media(prefers-reduced-motion:reduce){body::before,body::after{animation:none!important}}
 
 </style>
 </head>
