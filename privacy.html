@@ -20,34 +20,33 @@ body{position:relative;isolation:isolate}
 body::before,body::after{
   content:"";
   position:fixed;
-  inset:-12%;
+  inset:-8%;
   z-index:0;
   pointer-events:none;
   background-repeat:no-repeat;
-  will-change:transform;
 }
 body::before{
-  opacity:.62;
-  filter:blur(42px);
+  opacity:.9;
+  filter:blur(26px);
   background-image:
-    radial-gradient(ellipse 27rem 21rem at 12% 24%,rgba(190,145,163,.105),transparent 72%),
-    radial-gradient(ellipse 24rem 29rem at 88% 58%,rgba(166,126,151,.095),transparent 73%),
-    radial-gradient(ellipse 30rem 18rem at 48% 96%,rgba(215,183,193,.065),transparent 74%);
+    radial-gradient(ellipse 25rem 21rem at 12% 22%,rgba(190,145,163,.30),transparent 72%),
+    radial-gradient(ellipse 23rem 28rem at 88% 55%,rgba(166,126,151,.27),transparent 73%),
+    radial-gradient(ellipse 28rem 18rem at 48% 96%,rgba(215,183,193,.19),transparent 74%);
 }
 body::after{
-  opacity:.38;
-  filter:blur(58px);
+  opacity:.78;
+  filter:blur(34px);
   background-image:
-    radial-gradient(ellipse 19rem 25rem at 72% 8%,rgba(207,168,183,.075),transparent 72%),
-    radial-gradient(ellipse 22rem 18rem at 8% 82%,rgba(154,119,145,.07),transparent 74%);
+    radial-gradient(ellipse 18rem 24rem at 72% 8%,rgba(207,168,183,.22),transparent 72%),
+    radial-gradient(ellipse 22rem 18rem at 8% 82%,rgba(154,119,145,.20),transparent 74%);
 }
 body>*{position:relative;z-index:1}
 @media(max-width:800px){
-  body::before{opacity:.48;filter:blur(34px);background-image:
-    radial-gradient(ellipse 18rem 18rem at 0% 20%,rgba(190,145,163,.10),transparent 73%),
-    radial-gradient(ellipse 19rem 23rem at 100% 58%,rgba(166,126,151,.09),transparent 74%),
-    radial-gradient(ellipse 20rem 15rem at 48% 96%,rgba(215,183,193,.055),transparent 75%)}
-  body::after{opacity:.25;filter:blur(44px)}
+  body::before{opacity:.82;filter:blur(23px);background-image:
+    radial-gradient(ellipse 17rem 18rem at 0% 20%,rgba(190,145,163,.28),transparent 73%),
+    radial-gradient(ellipse 18rem 22rem at 100% 58%,rgba(166,126,151,.25),transparent 74%),
+    radial-gradient(ellipse 19rem 15rem at 48% 96%,rgba(215,183,193,.17),transparent 75%)}
+  body::after{opacity:.68;filter:blur(30px)}
 }
 @media(prefers-reduced-motion:reduce){body::before,body::after{will-change:auto}}
 
