@@ -14,6 +14,43 @@ main{width:min(790px,calc(100% - 36px));margin:0 auto;padding:82px 0 100px}.eyeb
 @media(min-width:601px) and (max-width:1000px){main{width:min(740px,calc(100% - 64px));padding:68px 0 82px}.nav{width:calc(100% - 64px)}h1{font-size:clamp(3.6rem,7vw,5.2rem)}}
 @media(max-width:600px){main{width:calc(100% - 36px);padding:48px 0 64px}.nav{width:calc(100% - 36px)}.meta{margin-bottom:32px}.note{padding:14px 15px}p,li{overflow-wrap:anywhere}footer{line-height:2}}
 
+
+/* Ambient Meiyo accent glow: decorative only, never blocks content or controls */
+body{position:relative;isolation:isolate}
+body::before,body::after{
+  content:"";
+  position:fixed;
+  inset:-12%;
+  z-index:0;
+  pointer-events:none;
+  background-repeat:no-repeat;
+  will-change:transform;
+}
+body::before{
+  opacity:.62;
+  filter:blur(42px);
+  background-image:
+    radial-gradient(ellipse 27rem 21rem at 12% 24%,rgba(190,145,163,.105),transparent 72%),
+    radial-gradient(ellipse 24rem 29rem at 88% 58%,rgba(166,126,151,.095),transparent 73%),
+    radial-gradient(ellipse 30rem 18rem at 48% 96%,rgba(215,183,193,.065),transparent 74%);
+}
+body::after{
+  opacity:.38;
+  filter:blur(58px);
+  background-image:
+    radial-gradient(ellipse 19rem 25rem at 72% 8%,rgba(207,168,183,.075),transparent 72%),
+    radial-gradient(ellipse 22rem 18rem at 8% 82%,rgba(154,119,145,.07),transparent 74%);
+}
+body>*{position:relative;z-index:1}
+@media(max-width:800px){
+  body::before{opacity:.48;filter:blur(34px);background-image:
+    radial-gradient(ellipse 18rem 18rem at 0% 20%,rgba(190,145,163,.10),transparent 73%),
+    radial-gradient(ellipse 19rem 23rem at 100% 58%,rgba(166,126,151,.09),transparent 74%),
+    radial-gradient(ellipse 20rem 15rem at 48% 96%,rgba(215,183,193,.055),transparent 75%)}
+  body::after{opacity:.25;filter:blur(44px)}
+}
+@media(prefers-reduced-motion:reduce){body::before,body::after{will-change:auto}}
+
 </style></head><body>
 <header><div class="nav"><a class="brand" href="index.html"><img src="assets/meiyo-avatar.jpg" alt="">MEIYO</a><a href="index.html">← Back to home</a></div></header>
 <main><div class="eyebrow">DATA / PRIVACY</div><h1>Privacy Policy</h1><p class="lead">What Meiyo stores, why it is needed, and how data is handled.</p><div class="meta">Effective date: November 5, 2026 · Last updated: November 5, 2026</div>
