@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head>
+<base href="/"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101012">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Terms of Service | Meiyo</title><link rel="icon" href="assets/meiyo-avatar.jpg">
+<style>
+:root{--bg:#0c0c0e;--ink:#f4f0f0;--muted:#aaa2a5;--soft:#d9bfc3;--line:#ffffff18}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#79596320,transparent 38%),var(--bg);color:var(--ink);font:15px/1.8 'DM Sans',system-ui,sans-serif}a{color:#e7d4d8;text-decoration:none}a:hover{color:white;text-decoration:underline}
+header{position:sticky;top:0;z-index:5;background:#0c0c0edd;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{height:74px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px;color:var(--ink);font:2rem 'Manrope',sans-serif}.brand img{width:34px;height:34px;border-radius:50%;object-fit:cover;border:1px solid #ffffff55}.nav a:last-child{color:var(--muted);font-size:.88rem}
+main{width:min(790px,calc(100% - 36px));margin:0 auto;padding:82px 0 100px}.eyebrow{font-size:.68rem;letter-spacing:.2em;color:#cdb9be;text-transform:uppercase}.eyebrow:before{content:'✳  ';color:var(--soft)}h1{font:clamp(3.4rem,8vw,6rem)/1.02 'Manrope',sans-serif;margin:20px 0 18px;font-weight:700}.lead{color:#c4babe;font-size:1.08rem;max-width:650px}.meta{font-size:.78rem;color:#837b7f;margin:22px 0 45px}article{border-top:1px solid var(--line);padding-top:26px}h2{font:600 1.16rem Manrope,'DM Sans',sans-serif;letter-spacing:-.035em;margin:34px 0 8px;color:#f0e8ea}h2:first-child{margin-top:0}p,li{color:#bdb5b8}ul{padding-left:22px}li{margin:8px 0}code{background:#ffffff0d;border:1px solid var(--line);padding:2px 6px;border-radius:4px;color:#ead9dc;font-size:.9em}.note{border:1px solid #d9bfc32c;border-left:2px solid var(--soft);padding:16px 19px;background:#171417;color:#c9bec2;margin:30px 0 0;border-radius:0 5px 5px 0}footer{border-top:1px solid var(--line);padding:25px 18px;text-align:center;color:#81797d;font-size:.78rem}footer a{margin:0 5px}
+@media(max-width:600px){main{padding:60px 0 75px}.nav{height:66px}.brand{font-size:1.75rem}h1{font-size:clamp(3.3rem,14vw,4.6rem)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Responsive refinement for tablets and narrow phones */
+@media(min-width:601px) and (max-width:1000px){main{width:min(740px,calc(100% - 64px));padding:68px 0 82px}.nav{width:calc(100% - 64px)}h1{font-size:clamp(3.6rem,7vw,5.2rem)}}
+@media(max-width:600px){main{width:calc(100% - 36px);padding:48px 0 64px}.nav{width:calc(100% - 36px)}.meta{margin-bottom:32px}.note{padding:14px 15px}p,li{overflow-wrap:anywhere}footer{line-height:2}}
+
+
+
+
+/* Smooth, lightweight scroll reveals */
+.scroll-reveal{
+  opacity:0;
+  transform:translate3d(0,22px,0) scale(.985);
+  filter:blur(7px);
+  transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .85s cubic-bezier(.2,.7,.2,1),filter .85s cubic-bezier(.2,.7,.2,1);
+  transition-delay:var(--reveal-delay,0ms);
+  will-change:opacity,transform,filter;
+}
+.scroll-reveal.is-visible{opacity:1;transform:translate3d(0,0,0) scale(1);filter:blur(0)}
+@media(max-width:800px){.scroll-reveal{transform:translate3d(0,15px,0) scale(.992);filter:blur(5px);transition-duration:.68s}}
+@media(prefers-reduced-motion:reduce){.scroll-reveal,.scroll-reveal.is-visible{opacity:1;transform:none;filter:none;transition:none;will-change:auto}}
+
+
+.wrap{width:min(1160px,calc(100% - 48px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:#101012e8;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;margin:0 auto}
+.brand{display:flex;align-items:center;gap:12px;color:var(--ink);font:700 1.45rem Manrope,sans-serif;letter-spacing:-.04em;line-height:1}
+.links{display:flex;align-items:center;gap:30px;color:#bcb4b7;font-size:.9rem}
+.links a{color:inherit;transition:color .2s}
+.links a:hover,.links a.active{color:#fff;text-decoration:none}
+@media(max-width:600px){.wrap{width:calc(100% - 36px)}.nav{height:66px}.brand{font-size:1.35rem}.links{gap:20px;font-size:.84rem}}
+</style></head><body>
+<header><div class="wrap nav"><a class="brand" href="/">Meiyo</a><nav class="links"><a href="/">Community</a><a href="/bot/">Meiyo Bot</a></nav></div></header>
+<main><div class="eyebrow">COMMUNITY / TERMS</div><h1>Terms of Service</h1><p class="lead">The rules and expectations for using Meiyo and participating in its community.</p><div class="meta">Effective date: November 5, 2026 · Last updated: November 5, 2026</div>
+<article>
+<h2>1. Welcome to Meiyo</h2>
+<p>Meiyo is a friendly gaming community built around respectful conversation, finding people to play with, and enjoying games together. By joining or participating in our Discord server, you agree to these community terms.</p>
+<h2>2. Be respectful</h2>
+<ul><li>Treat members with respect. Harassment, bullying, threats, hate speech, and targeted abuse are not allowed.</li>
+<li>Do not spam, flood channels, raid the server, or disrupt other members' conversations.</li>
+<li>Do not share another person's private information, account credentials, or personal content without permission.</li>
+<li>Keep content in the appropriate channels and follow moderator instructions.</li></ul>
+<h2>3. Safe and lawful use</h2>
+<ul><li>Do not use the community to promote scams, phishing, malware, cheating services that compromise others, or other harmful activity.</li>
+<li>Do not post illegal content or content that violates Discord's rules.</li>
+<li>Respect intellectual property and do not impersonate other members, staff, or official services.</li>
+<li>Use age-appropriate channels and follow applicable age requirements.</li></ul>
+<h2>4. Moderation</h2>
+<p>Moderators may remove content, issue warnings, restrict access, mute, kick, or ban members when reasonably necessary to protect the community. Serious or repeated violations may result in immediate action. Moderation decisions are made to maintain a safe and welcoming space.</p>
+<h2>5. Meiyo bot</h2>
+<p>Meiyo may provide welcome messages, invite tracking, invite leaderboards, account-age notices, and optional role assignment. These features may be changed, paused, or discontinued. Invite counts are best-effort estimates and may not always be perfectly accurate.</p>
+<h2>6. Your responsibility</h2>
+<p>You are responsible for your account activity and for ensuring that the content you share is appropriate and that you have permission to share it. Do not attempt to exploit, disrupt, or reverse-engineer the bot or its hosting environment.</p>
+<h2>7. Discord's rules also apply</h2>
+<p>Our server operates on Discord. You must also comply with the <a href="https://discord.com/terms" target="_blank" rel="noopener">Discord Terms of Service</a> and <a href="https://discord.com/guidelines" target="_blank" rel="noopener">Discord Community Guidelines</a>. Those documents govern your use of Discord's platform; these terms describe the additional rules for participating in the Meiyo community.</p>
+<h2>8. Changes</h2>
+<p>These terms may be updated as the community develops. Continued participation after an updated version is posted means you accept the revised terms. Material changes should be announced in the server.</p>
+<h2>9. Contact</h2>
+<p>For questions, concerns, or moderation appeals, contact the Meiyo server administration team through the official Discord server.</p>
+<div class="note">These community terms are a practical starting point, not legal advice. Review them for your actual server rules and local legal requirements before publishing.</div>
+</article></main>
+<footer>Meiyo is Jay’s personal Discord bot and is not affiliated with or endorsed by Discord Inc. · <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a> · Created and managed by Jay.</footer>
+
+<script>
+(()=>{
+  const reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(reduce||!("IntersectionObserver" in window)) return;
+  const selectors=[
+    ".ticker",".section-head",".game",".about-panel",".item",".note",
+    "main > .join","main > .closing","main > .eyebrow","main > h1",
+    "main > .lead","main > .meta","article > h2","article > p",
+    "article > ul","article > .note","footer"
+  ].join(",");
+  const targets=[...document.querySelectorAll(selectors)];
+  targets.forEach((el,i)=>{
+    el.classList.add("scroll-reveal");
+    if(el.matches(".game,.item")) el.style.setProperty("--reveal-delay",(i%3)*85+"ms");
+  });
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){entry.target.classList.add("is-visible");observer.unobserve(entry.target)}
+    });
+  },{threshold:.08,rootMargin:"0px 0px -36px 0px"});
+  targets.forEach(el=>observer.observe(el));
+})();
+</script>
+
+</body></html>
