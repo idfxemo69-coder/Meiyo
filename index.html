@@ -175,6 +175,31 @@ section{padding:100px 0}.section-head{display:flex;justify-content:space-between
 .game h3{margin:0}
 .game p{margin:7px 0 0}
 
+
+/* Pin both game titles to the same baseline, independent of description wrapping */
+.game > div{
+  position:absolute;
+  left:25px;
+  right:60px;
+  bottom:25px;
+  height:118px;
+  min-height:0;
+  display:block;
+}
+.game > div h3{
+  position:absolute;
+  top:0;
+  left:0;
+  margin:0;
+}
+.game > div p{
+  position:absolute;
+  left:0;
+  bottom:0;
+  margin:0;
+  max-width:360px;
+}
+
 </style>
 </head>
 <body><div class="topline"></div>
