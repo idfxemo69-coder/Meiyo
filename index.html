@@ -111,6 +111,27 @@ section{padding:100px 0}.section-head{display:flex;justify-content:space-between
 .discord-card .btn{flex:0 0 auto}
 @media(max-width:650px){.discord-card{align-items:flex-start;flex-direction:column;padding:23px;gap:22px}.discord-avatar{width:62px;height:62px;border-radius:18px}.discord-stats{gap:25px}.discord-card .btn{width:100%}.discord-banner:after{background:linear-gradient(90deg,#111013ed,#111013c9)}}
 
+
+/* Keep game-card category labels readable over busy artwork */
+.game small{
+  position:relative;
+  z-index:2;
+  display:inline-flex;
+  align-items:center;
+  width:max-content;
+  max-width:100%;
+  padding:7px 11px;
+  color:#fff;
+  background:rgba(12,11,13,.84);
+  border:1px solid rgba(255,255,255,.24);
+  border-radius:3px;
+  letter-spacing:.14em;
+  line-height:1.35;
+  text-shadow:0 1px 2px #000;
+  -webkit-backdrop-filter:blur(8px);
+  backdrop-filter:blur(8px);
+}
+
 </style>
 </head>
 <body><div class="topline"></div>
