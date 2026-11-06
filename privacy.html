@@ -30,8 +30,17 @@ main{width:min(790px,calc(100% - 36px));margin:0 auto;padding:82px 0 100px}.eyeb
 @media(max-width:800px){.scroll-reveal{transform:translate3d(0,15px,0) scale(.992);filter:blur(5px);transition-duration:.68s}}
 @media(prefers-reduced-motion:reduce){.scroll-reveal,.scroll-reveal.is-visible{opacity:1;transform:none;filter:none;transition:none;will-change:auto}}
 
+
+.wrap{width:min(1160px,calc(100% - 48px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:#101012e8;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;color:var(--ink);font:700 1.45rem Manrope,sans-serif;letter-spacing:-.04em}
+.links{display:flex;align-items:center;gap:30px;color:#bcb4b7;font-size:.9rem}
+.links a{color:inherit;transition:color .2s}
+.links a:hover,.links a.active{color:#fff;text-decoration:none}
+@media(max-width:600px){.wrap{width:calc(100% - 36px)}.nav{height:66px}.brand{font-size:1.35rem}.links{gap:20px;font-size:.84rem}}
 </style></head><body>
-<header><div class="nav"><a class="brand" href="index.html"><img src="assets/meiyo-avatar.jpg" alt="">MEIYO</a><a href="index.html">← Back to home</a></div></header>
+<header><div class="wrap nav"><a class="brand" href="index.html">Meiyo</a><nav class="links"><a href="index.html">Community</a><a href="bot.html">Meiyo Bot</a></nav></div></header>
 <main><div class="eyebrow">DATA / PRIVACY</div><h1>Privacy Policy</h1><p class="lead">What Meiyo stores, why it is needed, and how data is handled.</p><div class="meta">Effective date: November 5, 2026 · Last updated: November 5, 2026</div>
 <article>
 <h2>1. About this policy</h2>
@@ -60,7 +69,7 @@ main{width:min(790px,calc(100% - 36px));margin:0 auto;padding:82px 0 100px}.eyeb
 <p>Meiyo does not knowingly seek to collect personal information beyond what is needed for its Discord features. Users must meet Discord's minimum age requirement and any higher age requirement that applies in their location.</p>
 <h2>9. Changes and contact</h2>
 <p>This policy may be updated when the bot's features or data handling changes. The latest version will be published at this page. For privacy questions or deletion requests, contact the Meiyo server administration team through the official Discord server.</p>
-<div class="note">This policy describes the current bot design as configured for local JSON storage. If you change the bot to use a database, hosting provider, analytics, or other integrations, update this policy before using those features.</div>
+
 </article></main>
 <footer>Meiyo is Jay’s personal Discord bot and is not affiliated with or endorsed by Discord Inc. · <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> · Created and managed by Jay.</footer>
 
