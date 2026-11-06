@@ -132,12 +132,37 @@ section{padding:100px 0}.section-head{display:flex;justify-content:space-between
   backdrop-filter:blur(8px);
 }
 
+
+/* Game-card labels: clean type with a readable shadow, no badge */
+.game small{
+  display:block;
+  width:max-content;
+  max-width:100%;
+  padding:0;
+  color:#fff;
+  background:transparent;
+  border:0;
+  border-radius:0;
+  -webkit-backdrop-filter:none;
+  backdrop-filter:none;
+  text-shadow:0 2px 5px rgba(0,0,0,.95),0 0 14px rgba(0,0,0,.9),0 1px 18px rgba(0,0,0,.75);
+}
+/* Keep card reveal separate from hover movement to avoid transform conflicts */
+.game-reveal{
+  opacity:0;
+  filter:blur(5px);
+  transition:opacity .7s cubic-bezier(.2,.7,.2,1),filter .7s cubic-bezier(.2,.7,.2,1);
+  transition-delay:var(--reveal-delay,0ms);
+}
+.game-reveal.is-visible{opacity:1;filter:blur(0)}
+@media(prefers-reduced-motion:reduce){.game-reveal,.game-reveal.is-visible{opacity:1;filter:none;transition:none}}
+
 </style>
 </head>
 <body><div class="topline"></div>
 <header><div class="wrap nav"><a class="brand" href="index.html">Meiyo</a><nav class="links"><a class="active" href="index.html">Community</a><a href="bot.html">Meiyo Bot</a></nav></div></header>
 <main>
-<div class="wrap hero"><div class="hero-copy"><div class="eyebrow">A place to play and hang out</div><h1>Find your <span>people.</span></h1><p class="lead">Meiyo is a gaming community currently centred on Roblox and Valorant. Players of all games are welcome to join, meet others, and spend time together.</p><div class="actions"><a class="btn primary" href="https://discord.gg/EdFzvnwJP" target="_blank" rel="noopener">Join the community <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a><a class="btn secondary" href="#games">What we play <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m-7-7 7 7 7-7"/></svg></a></div></div>
+<div class="wrap hero"><div class="hero-copy"><div class="eyebrow">A place to play and hang out</div><h1>Find your <span>people.</span></h1><p class="lead">Meiyo is a gaming community currently centred on Roblox and Valorant. Players of all games are welcome to join, meet others, and spend time together.</p><div class="actions"><a class="btn primary" href="https://discord.gg/EdFzvnwJP" target="_blank" rel="noopener">Join the community <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a><a class="btn secondary" href="#about">Discover Meiyo <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div></div>
 <div class="visual"><div class="halo"></div><div class="ring"></div><div class="portrait mark"><img src="assets/meiyo-mark.svg" alt="Meiyo M logo"></div><div class="floating">Meet the community<strong>Meiyo</strong></div></div></div>
 
 
@@ -154,7 +179,7 @@ section{padding:100px 0}.section-head{display:flex;justify-content:space-between
 <a class="game" href="https://playvalorant.com/en-us/" target="_blank" rel="noopener noreferrer" aria-label="Learn about VALORANT on the official VALORANT website"><small>02 / TEAM UP</small><div><h3>Valorant</h3><p>Find teammates, queue together, and talk between matches.</p></div><span class="index">02 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></span></a>
 
 </div></div></section>
-<section><div class="wrap about-panel"><div><div class="kicker">02 / The community</div><h2>Come as you are.</h2></div><div class="about-copy"><p>Roblox and Valorant are our current main games, but <strong>players of all games and experience levels are welcome.</strong></p><p>Join to chat, meet other players, or find people to play with. You do not need to play Roblox or Valorant to be part of the community.</p><a class="btn secondary mobile-cta" href="https://discord.gg/EdFzvnwJP" target="_blank" rel="noopener">Come say hi <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div></div></section>
+<section id="about"><div class="wrap about-panel"><div><div class="kicker">02 / The community</div><h2>Come as you are.</h2></div><div class="about-copy"><p>Roblox and Valorant are our current main games, but <strong>players of all games and experience levels are welcome.</strong></p><p>Join to chat, meet other players, or find people to play with. You do not need to play Roblox or Valorant to be part of the community.</p><a class="btn secondary mobile-cta" href="https://discord.gg/EdFzvnwJP" target="_blank" rel="noopener">Come say hi <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div></div></section>
 <div class="wrap join"><div><div class="kicker">03 / Your turn</div><h2>See you in the server.</h2><p>Come meet the people behind the usernames.</p></div><a class="btn primary" href="https://discord.gg/EdFzvnwJP" target="_blank" rel="noopener">Join Meiyo on Discord <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
 </main>
 <footer><div class="wrap foot"><strong>Created and managed by Jay.</strong><a class="find-me" href="https://discord.com/users/601025419990532116" target="_blank" rel="noopener">Find me here</a><div class="footlinks"><a href="bot.html">The bot</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="https://discord.gg/EdFzvnwJP" target="_blank" rel="noopener">Discord <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div></div></footer>
@@ -171,7 +196,7 @@ section{padding:100px 0}.section-head{display:flex;justify-content:space-between
   ].join(",");
   const targets=[...document.querySelectorAll(selectors)];
   targets.forEach((el,i)=>{
-    el.classList.add("scroll-reveal");
+    el.classList.add(el.matches(".game")?"game-reveal":"scroll-reveal");
     if(el.matches(".game,.item")) el.style.setProperty("--reveal-delay",(i%3)*85+"ms");
   });
   const observer=new IntersectionObserver(entries=>{
