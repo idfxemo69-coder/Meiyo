@@ -64,6 +64,23 @@ body>*{position:relative;z-index:1}
 }
 @media(prefers-reduced-motion:reduce){body::before,body::after{animation:none!important}}
 
+
+/* Scroll reveal: progressive enhancement, content stays visible if JS is unavailable */
+.scroll-reveal{
+  opacity:0;
+  transform:translate3d(0,26px,0);
+  filter:blur(4px);
+  transition:opacity .75s ease,transform .8s cubic-bezier(.2,.7,.2,1),filter .8s ease;
+  transition-delay:var(--reveal-delay,0ms);
+}
+.scroll-reveal.is-visible{opacity:1;transform:translate3d(0,0,0);filter:blur(0)}
+@media(max-width:800px){
+  .scroll-reveal{transform:translate3d(0,18px,0);filter:blur(3px);transition-duration:.65s}
+}
+@media(prefers-reduced-motion:reduce){
+  .scroll-reveal,.scroll-reveal.is-visible{opacity:1;transform:none;filter:none;transition:none}
+}
+
 </style></head><body>
 <header><div class="nav"><a class="brand" href="index.html"><img src="assets/meiyo-avatar.jpg" alt="">MEIYO</a><a href="index.html">← Back to home</a></div></header>
 <main><div class="eyebrow">COMMUNITY / TERMS</div><h1>Terms of Service</h1><p class="lead">The rules and expectations for using Meiyo and participating in its community.</p><div class="meta">Effective date: November 5, 2026 · Last updated: November 5, 2026</div>
@@ -95,4 +112,27 @@ body>*{position:relative;z-index:1}
 <div class="note">These community terms are a practical starting point, not legal advice. Review them for your actual server rules and local legal requirements before publishing.</div>
 </article></main>
 <footer>Meiyo is Jay’s personal Discord bot and is not affiliated with or endorsed by Discord Inc. · <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> · Created and managed by Jay.</footer>
+
+<script>
+(()=> {
+  const reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const selectors="main > section, main > .join, main > .closing, .section-head, .game, .about-panel, .item, .note, article h2, article p, article li, article .note";
+  const targets=[...document.querySelectorAll(selectors)];
+  if(!targets.length||reduce||!("IntersectionObserver" in window)) return;
+  targets.forEach((el,i)=>{
+    el.classList.add("scroll-reveal");
+    if(el.matches(".game,.item")) el.style.setProperty("--reveal-delay",(i%4)*75+"ms");
+  });
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },{threshold:.12,rootMargin:"0px 0px -45px 0px"});
+  targets.forEach(el=>observer.observe(el));
+})();
+</script>
+
 </body></html>
