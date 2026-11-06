@@ -93,6 +93,24 @@ section{padding:100px 0}.section-head{display:flex;justify-content:space-between
 @media(max-width:800px){.scroll-reveal{transform:translate3d(0,15px,0) scale(.992);filter:blur(5px);transition-duration:.68s}}
 @media(prefers-reduced-motion:reduce){.scroll-reveal,.scroll-reveal.is-visible{opacity:1;transform:none;filter:none;transition:none;will-change:auto}}
 
+
+/* Live Discord community card */
+.discord-card-section{padding:0 0 28px}
+.discord-card{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:28px;min-height:190px;padding:30px;background:var(--panel);border:1px solid var(--line);border-radius:8px}
+.discord-banner{position:absolute;inset:0;z-index:-2;background:linear-gradient(100deg,#211b20,#171619 70%) center/cover no-repeat}
+.discord-banner:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#111013f2 0%,#111013df 48%,#111013a8 100%)}
+.discord-identity{display:flex;align-items:center;gap:18px;min-width:0}
+.discord-avatar{width:76px;height:76px;flex:0 0 auto;border-radius:22px;object-fit:cover;background:#292329;border:1px solid #ffffff24}
+.discord-name{font:700 clamp(1.25rem,3vw,1.7rem) Manrope,sans-serif;letter-spacing:-.04em;margin:0}
+.discord-label{color:#cbb9bf;font-size:.68rem;text-transform:uppercase;letter-spacing:.17em;margin-bottom:5px}
+.discord-stats{display:flex;gap:30px;flex-wrap:wrap}
+.discord-stat strong{display:block;font:700 1.65rem Manrope,sans-serif;letter-spacing:-.05em}
+.discord-stat span{color:#aaa2a6;font-size:.72rem}
+.discord-live{display:inline-flex;align-items:center;gap:7px;color:#b8d7c2;font-size:.72rem;margin-top:8px}
+.discord-live:before{content:"";width:7px;height:7px;border-radius:50%;background:#75c58b;box-shadow:0 0 10px #75c58b88}
+.discord-card .btn{flex:0 0 auto}
+@media(max-width:650px){.discord-card{align-items:flex-start;flex-direction:column;padding:23px;gap:22px}.discord-avatar{width:62px;height:62px;border-radius:18px}.discord-stats{gap:25px}.discord-card .btn{width:100%}.discord-banner:after{background:linear-gradient(90deg,#111013ed,#111013c9)}}
+
 </style>
 </head>
 <body><div class="topline"></div>
@@ -100,6 +118,15 @@ section{padding:100px 0}.section-head{display:flex;justify-content:space-between
 <main>
 <div class="wrap hero"><div class="hero-copy"><div class="eyebrow">A place to play and hang out</div><h1>Find your <span>people.</span></h1><p class="lead">Meiyo is a gaming community currently centred on Roblox and Valorant. Players of all games are welcome to join, meet others, and spend time together.</p><div class="actions"><a class="btn primary" href="https://discord.gg/EdFzvnwJP" target="_blank" rel="noopener">Join the community <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a><a class="btn secondary" href="#games">What we play <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m-7-7 7 7 7-7"/></svg></a></div></div>
 <div class="visual"><div class="halo"></div><div class="ring"></div><div class="portrait mark"><img src="assets/meiyo-mark.svg" alt="Meiyo M logo"></div><div class="floating">Meet the community<strong>Meiyo</strong></div></div></div>
+
+
+<section class="discord-card-section" aria-label="Meiyo Discord server">
+<div class="wrap"><div class="discord-card">
+<div class="discord-banner" id="discordBanner"></div>
+<div class="discord-identity"><img class="discord-avatar" id="discordAvatar" src="assets/meiyo-avatar.jpg" alt="Meiyo Discord server icon"><div><div class="discord-label">Our Discord community</div><h2 class="discord-name" id="discordName">Meiyo</h2><div class="discord-live">Live server stats</div></div></div>
+<div class="discord-stats"><div class="discord-stat"><strong id="discordMembers">--</strong><span>Members</span></div><div class="discord-stat"><strong id="discordOnline">--</strong><span>Online now</span></div></div>
+<a class="btn primary" href="https://discord.gg/EdFzvnwJP" target="_blank" rel="noopener">Join server <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+</div></div></section>
 
 <section id="games"><div class="wrap"><div class="section-head"><div><div class="kicker">01 / What we play</div><h2>Currently playing.</h2></div><p>Roblox and Valorant are our current main games. Players interested in other games are welcome too.</p></div><div class="games">
 <a class="game" href="https://about.roblox.com/what-is-roblox" target="_blank" rel="noopener noreferrer" aria-label="Learn about Roblox on the official Roblox website"><small>01 / PLAY TOGETHER</small><div><h3>Roblox</h3><p>Find people for your favourite experiences, or discover something new.</p></div><span class="index">01 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></span></a>
@@ -132,6 +159,44 @@ section{padding:100px 0}.section-head{display:flex;justify-content:space-between
     });
   },{threshold:.08,rootMargin:"0px 0px -36px 0px"});
   targets.forEach(el=>observer.observe(el));
+})();
+</script>
+
+
+<script>
+(()=> {
+  const guildId="1567603943968735243";
+  const inviteCode="EdFzvnwJP";
+  const set=(id,value)=>{const el=document.getElementById(id);if(el&&value!==undefined&&value!==null)el.textContent=Number(value).toLocaleString("en-US")};
+  const cdn=(kind,hash)=>"https://cdn.discordapp.com/"+kind+"/"+guildId+"/"+hash+".png?size=256";
+  const load=async()=>{
+    try{
+      const [invite,widget]=await Promise.all([
+        fetch("https://discord.com/api/v10/invites/"+inviteCode+"?with_counts=true").then(r=>r.ok?r.json():null).catch(()=>null),
+        fetch("https://discord.com/api/guilds/"+guildId+"/widget.json").then(r=>r.ok?r.json():null).catch(()=>null)
+      ]);
+      const guild=invite&&invite.guild;
+      if(guild){
+        const name=document.getElementById("discordName");
+        if(name&&guild.name)name.textContent=guild.name;
+        const avatar=document.getElementById("discordAvatar");
+        if(avatar&&guild.icon)avatar.src=cdn("icons",guild.icon);
+        if(guild.banner){
+          const banner=document.getElementById("discordBanner");
+          if(banner)banner.style.backgroundImage="url('https://cdn.discordapp.com/banners/"+guildId+"/"+guild.banner+".png?size=1024')";
+        }
+        set("discordMembers",invite.approximate_member_count);
+        set("discordOnline",invite.approximate_presence_count);
+      }
+      if(widget){
+        if(widget.name){const name=document.getElementById("discordName");if(name)name.textContent=widget.name}
+        if(widget.icon){const avatar=document.getElementById("discordAvatar");if(avatar)avatar.src="https://cdn.discordapp.com/icons/"+guildId+"/"+widget.icon+".png?size=256"}
+        if(Number.isFinite(widget.presence_count))set("discordOnline",widget.presence_count);
+      }
+    }catch(error){console.info("Discord server stats are unavailable right now.",error)}
+  };
+  load();
+  setInterval(load,300000);
 })();
 </script>
 
